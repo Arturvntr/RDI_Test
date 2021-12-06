@@ -63,12 +63,46 @@ string getLastLoop(string commands) {
 }
 
 int main(int argc, char* argv[]) {
-	//string temp = "RRRRDDDLLUUUUUUURRDDDDR";
-
-	string temp = "RRRRRRRRUUUUUUUULLLLLLLLDDDDDDDD";
+	string value, result, compare, testNumber;
 	
-	string result = getLastLoop(temp);
-	
-	cout << result + "\n";
 
+	// Test 1
+	testNumber = "Test 1";
+	value = "RRRRDDDLLUUUUUUURRDDDDR";
+	compare = "RRDDDLLUUU";
+	result = getLastLoop(value);
+	if (result == compare) cout << testNumber << " Pass     -     " << result << "\n";
+	else cout << testNumber << " Fail     -     " << result << "\n";
+
+	// Test 2
+	testNumber = "Test 2";
+	value = "RRRRRRRRUUUUUUUULLLLLLLLDDDDDDDD";
+	compare = "RRRRRRRRUUUUUUUULLLLLLLLDDDDDDDD";
+	result = getLastLoop(value);
+	if (result == compare) cout << testNumber << " Pass     -     " << result << "\n";
+	else cout << testNumber << " Fail     -     " << result << "\n";
+
+	// Test 3
+	testNumber = "Test 3";
+	value = "RRRRRRRRRRRRRRRRRRRRRRRR";
+	compare = "";
+	result = getLastLoop(value);
+	if (result == compare) cout << testNumber << " Pass     -     " << result << "\n";
+	else cout << testNumber << " Fail     -     " << result << "\n";
+
+	// Test 4
+	testNumber = "Test 4";
+	value = "ULDR";
+	compare = "ULDR";
+	result = getLastLoop(value);
+	if (result == compare) cout << testNumber << " Pass     -     " << result << "\n";
+	else cout << testNumber << " Fail     -     " << result << "\n";
+
+	// Test 5
+	testNumber = "Test 2";
+	value = "";
+	compare = "";
+	result = getLastLoop(value);
+	if (result == compare) cout << testNumber << " Pass     -     " << result << "\n";
+	else cout << testNumber << " Fail     -     " << result << "\n";
 }

@@ -8,15 +8,15 @@ using namespace std;
 
 /* recursive function which will compute possibilies from each set of coins */
 /*
-* @Param: value - Integer value from 0 to 99
+* @Param: value - Integer value from 1 to 99
 * @Param: coins - set of coins to be user for combination
 */
 int countChange(int value, vector<int> coins) {
     if (value == 0) return 1;
-    else if (coins.empty() || valeu < 0) return 0;
+    else if (coins.empty() || value < 0) return 0;
     else {
         int result = 0;
-        result = countChange(valeu - coins.back(), coins);
+        result = countChange(value - coins.back(), coins);
         coins.pop_back();
         result = result + countChange(value, coins);
         return result;
@@ -38,11 +38,50 @@ int getNumberOfCombinations(int value) {
 */
 
 int main(int argc, char* argv[]) {
+    int value, result, compare;
+    string testNumber;
 
-	int temp = 5;
 
-	int result = getNumberOfCombinations(temp);
+    // test 1
+    testNumber = "Test 1";
+	value = 5;
+    compare = 2;
+    result = getNumberOfCombinations(value);
+    if (result == compare) cout << testNumber << " Pass     -     " << result << "\n";
+    else cout << testNumber << " Fail     -     " << result << "\n";
 
-	cout << "" + result;
+    // test 2
+    testNumber = "Test 2";
+    value = 10;
+    compare = 4;
+    result = getNumberOfCombinations(value);
+    if (result == compare) cout << testNumber << " Pass     -     " << result << "\n";
+    else cout << testNumber << " Fail     -     " << result << "\n";
+
+    // test 3
+    testNumber = "Test 3";
+    value = 17;
+    compare = 6;
+    result = getNumberOfCombinations(value);
+    if (result == compare) cout << testNumber << " Pass     -     " << result << "\n";
+    else cout << testNumber << " Fail     -     " << result << "\n";
+
+    // test 4
+    testNumber = "Test 4";
+    value = 20;
+    compare = 10;
+    result = getNumberOfCombinations(value);
+    if (result == compare) cout << testNumber << " Pass     -     " << result << "\n";
+    else cout << testNumber << " Fail     -     " << result << "\n";
+
+    // test 5
+    testNumber = "Test 5";
+    value = 22;
+    compare = 10;
+    result = getNumberOfCombinations(value);
+    if (result == compare) cout << testNumber << " Pass     -     " << result << "\n";
+    else cout << testNumber << " Fail     -     " << result << "\n";
+
+    
 
 }

@@ -32,11 +32,54 @@ string isPalindromePermutation(string text) {
 
 
 int main(int argc, char* argv[]) {
+	string value, result, compare, testNumber;
 
-	string temp = "abcabcabcabczz";
 
-	string result = isPalindromePermutation(temp);
+	// Test 1
+	testNumber = "Test 1";
+	value = "a";
+	compare = "YES";
+	result = isPalindromePermutation(value);
+	if (result == compare) cout << testNumber << " Pass     -     " << result << "\n";
+	else cout << testNumber << " Fail     -     " << result << "\n";
 
-	cout << result + "\n";
+	// Test 2
+	testNumber = "Test 2";
+	value = "ab";
+	compare = "NO";
+	result = isPalindromePermutation(value);
+	if (result == compare) cout << testNumber << " Pass     -     " << result << "\n";
+	else cout << testNumber << " Fail     -     " << result << "\n";
 
+	// Test 3
+	testNumber = "Test 3";
+	value = "carroaco";
+	compare = "YES";
+	result = isPalindromePermutation(value);
+	if (result == compare) cout << testNumber << " Pass     -     " << result << "\n";
+	else cout << testNumber << " Fail     -     " << result << "\n";
+
+	// Test 4
+	testNumber = "Test 4";
+	value = "abcabcabc";
+	compare = "NO";
+	result = isPalindromePermutation(value);
+	if (result == compare) cout << testNumber << " Pass     -     " << result << "\n";
+	else cout << testNumber << " Fail     -     " << result << "\n";
+
+	// Test 5
+	testNumber = "Test 5";
+	value = "abcabcabczc";
+	compare = "NO";
+	result = isPalindromePermutation(value);
+	if (result == compare) cout << testNumber << " Pass     -     " << result << "\n";
+	else cout << testNumber << " Fail     -     " << result << "\n";
+
+	// Test 6
+	testNumber = "Test 6";
+	value = "abcabcabcca";
+	compare = "YES";
+	result = isPalindromePermutation(value);
+	if (result == compare) cout << testNumber << " Pass     -     " << result << "\n";
+	else cout << testNumber << " Fail     -     " << result << "\n";
 }
