@@ -2,10 +2,13 @@
 
 public class Palindrome
 {
-
+	/* Function to check if a given string can be a palidrome permuting its letters
+	*  @param: text - String to be checked
+	*	string must contain lowcaser letters between a - z
+	*   Function check if there is more than one letters with odd amount. if there is this text cannot be a palindrome
+	*/
 	public string isPalindromePermutaiton(string text)
     {
-        //var letters = Vector.Create<int>(27);
 		int[] letters = new int[27];
 
 		for (int i = 0; i < text.Length; i++)
@@ -35,6 +38,64 @@ public class Palindrome
 		string result = palindrome.isPalindromePermutaiton(temp);
 
 		Console.WriteLine(result);
+
+
+		string value, result, compare, testNumber, print;
+
+
+	// Test 1
+	testNumber = "Test 1";
+	value = "a";
+	compare = "YES";
+	result = isPalindromePermutation(value);
+	if (result == compare) print = testNumber + " Pass     -     " + result + "\n";
+	else print = testNumber + " Fail     -     " + result + "\n";
+	Console.WriteLine(print);
+
+	// Test 2
+	testNumber = "Test 2";
+	value = "ab";
+	compare = "NO";
+	result = isPalindromePermutation(value);
+	if (result == compare) print = testNumber + " Pass     -     " + result + "\n";
+	else print = testNumber + " Fail     -     " + result + "\n";
+	Console.WriteLine(print);
+
+	// Test 3
+	testNumber = "Test 3";
+	value = "carroaco";
+	compare = "YES";
+	result = isPalindromePermutation(value);
+	if (result == compare) print = testNumber + " Pass     -     " + result + "\n";
+	else print = testNumber + " Fail     -     " + result + "\n";
+	Console.WriteLine(print);
+
+	// Test 4
+	testNumber = "Test 4";
+	value = "abcabcabc";
+	compare = "NO";
+	result = isPalindromePermutation(value);
+	if (result == compare) print = testNumber + " Pass     -     " + result + "\n";
+	else print = testNumber + " Fail     -     " + result + "\n";
+	Console.WriteLine(print);
+
+	// Test 5
+	testNumber = "Test 5";
+	value = "abcabcabczc";
+	compare = "NO";
+	result = isPalindromePermutation(value);
+	if (result == compare) print = testNumber + " Pass     -     " + result + "\n";
+	else print = testNumber + " Fail     -     " + result + "\n";
+	Console.WriteLine(print);
+
+	// Test 6
+	testNumber = "Test 6";
+	value = "abcabcabcca";
+	compare = "YES";
+	result = isPalindromePermutation(value);
+	if (result == compare) print = testNumber + " Pass     -     " + result + "\n";
+	else print = testNumber + " Fail     -     " + result + "\n";
+	Console.WriteLine(print);
 
 	}
 }
